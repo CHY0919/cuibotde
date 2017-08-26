@@ -62,7 +62,11 @@ class LINEBotTiny
     public function parseEvents()
     {
         echo "12223";
-
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            http_response_code(405);
+            error_log("Method not allowed");
+            exit();
+        }
 
         $entityBody = file_get_contents('php://input');
 
@@ -104,7 +108,7 @@ class LINEBotTiny
 
         $response = file_get_contents('https://api.line.me/v2/bot/message/reply', false, $context);
         if (strpos($http_response_header[0], '200') === false) {
-            http_response_code(500);
+            #http_response_code(500);
             error_log("Request failed: " . $response);
         }
     }
