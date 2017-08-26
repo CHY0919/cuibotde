@@ -25,7 +25,7 @@
 	// 	  ]
 	// 	}
 	 
-	 
+	 phpinfo();
 	// 將收到的資料整理至變數
 	$receive = json_decode(file_get_contents("php://input"));
 	
@@ -61,6 +61,7 @@
 	
 	// 回覆訊息
 	reply($content_type, $text);
+
 	
 	function reply($content_type, $message) {
 	 
