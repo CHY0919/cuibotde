@@ -23,10 +23,9 @@
 	// 		  }
 	// 	  ]
 	// 	}
-	 var_dump("123333");
 
-	 #$receive = json_decode(file_get_contents("php://input"));
-	 #var_dump($receive);
+	 $receive = json_decode(file_get_contents("php://input"));
+	 var_dump($receive);
 	
 
 	
