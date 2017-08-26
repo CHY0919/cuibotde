@@ -25,7 +25,6 @@
 	// 	}
 
 	 $receive = json_decode(file_get_contents("php://input"));
-	 var_dump($receive);
 
 	 	// 讀取收到的訊息內容
 	$text = $receive->events[0]->message->text;
