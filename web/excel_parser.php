@@ -159,7 +159,11 @@ function get_day($day)
 		  {
 		  	if($m_key=="補"||$m_key=="of"||$m_key=="課"||$m_key=="off")
 		  		continue;
-		  	$output_str2=$output_str2."\n".$m_key."：".$hashtable[$m_key];
+		  	if($m_key=="白")
+		  	{$output_str2=$output_str2."\n"."正常班：".$hashtable[$m_key];}
+		  	else
+		  	{$output_str2=$output_str2."\n".$m_key."：".$hashtable[$m_key];}
+		  	
 
 		  }
 
@@ -167,7 +171,7 @@ function get_day($day)
 		  //echo $output_str2;
 		  //var_dump($hashtable);
 
-		  return $output_str.$output_str2;
+		  return $output_str."\n".$output_str2;
 
 
 	}
