@@ -52,7 +52,20 @@ foreach ($client->parseEvents() as $event) {
                 			break;
                 		$m_message = get_day($m_day);
                 	}
-
+                	else if($message['text']=="明天班表"||$message['text']=="明日班表")
+                	{
+                		$m_day = (int)date("d")+1;
+                		if((int)$m_day>32)
+                			break;
+                		$m_message = get_day($m_day);
+                	}	
+                	else if($message['text']=="後天班表")
+                	{
+                		$m_day = (int)date("d")+2;
+                		if((int)$m_day>32)
+                			break;
+                		$m_message = get_day($m_day);
+                	}
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
