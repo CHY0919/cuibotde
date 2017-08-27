@@ -19,7 +19,10 @@
 require_once('./LINEBotTiny.php');
 require_once('./excel_parser.php');
 
-#echo nl2br(get_day(date("d")));
+#$m_day = "31號班表";
+
+#$m_day = preg_replace('/[^\d]/','',$m_day );
+#echo nl2br(get_day($m_day));
 
 $channelAccessToken = 'hfKZRBMAdhy2zb8+w6lGxT125nw95ZeThqvZU2Jge0+uX04sAfaY8RLO/YQ0TWpKwhscvpoUnyXkOPK7t6jW834BRYxDkX+EZqoGgNB7MMpnLg1HfPS8OV7SX6VfZ1EucWDXRDRUSKZaR1WP69WATAdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'b59c0147973f523cca2165c4357250fa';
@@ -31,22 +34,24 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-
+                	$m_message = "";
                 	if($message['text']=="幸福翠柏")
                 	{
-                		$client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => "健康翠柏、樂活翠柏！"
-                            )
-                        )
-                    	));
+                		$m_message = "健康翠柏、樂活翠柏！";
                 	}
                 	else if($message['text']=="今天班表")
                 	{
                 		$m_message = get_day(date("d"));
+                		
+                	}
+                	else if(stristr($message['text'],"號班表"))
+                	{
+                		$m_day = preg_replace('/[^\d]/','',$message['text']);
+                		$m_message = get_day($m_day);
+                	}
+
+                	if($m_message!="")
+                	{
                 		$client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -57,8 +62,6 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
-
-
                     break;
                 
             }

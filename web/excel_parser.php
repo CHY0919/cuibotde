@@ -21,6 +21,7 @@ function alpha2num($a)  //英文轉數字(A=>0、B=>1、AA=>26...以此類推)
 
 function get_day($day)
 	{
+		$day = (int)$day+1;
 		$excel_file = "table.xls";
 
 		$tde_start = -1;
