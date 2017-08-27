@@ -157,7 +157,7 @@ function get_day($day)
 
 		  $on_count-=$of_count;
 
-		  $output_str = "替代役共：".$tde_count."人\n".$day-1."日上班：".$on_count."人\n".$sleep_str;
+		  $output_str = "替代役共：".$tde_count."人\n".(string)((int)($day)-1)."日上班：".$on_count."人\n".$sleep_str;
 		  $output_str2 = "";
 		  foreach ($keys as $m_key)
 		  {
