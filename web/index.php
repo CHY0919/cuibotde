@@ -30,7 +30,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
 
-                	if($message['text']=="幸福翠柏!")
+                	if($message['text']=="幸福翠柏")
                 	{
                 		$client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
@@ -42,7 +42,7 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
-                	else if($message['text']=="今天班表!")
+                	else if($message['text']=="今天班表")
                 	{
                 		$m_message = get_day((int)$date("d"));
                 		$client->replyMessage(array(
