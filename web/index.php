@@ -28,19 +28,22 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                    $client->replyMessage(array(
+
+                	if($message['text']=="幸福翠柏")
+                	{
+                		$client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $message['text']
+                                'text' => "健康翠柏、樂活翠柏！"
                             )
                         )
-                    ));
+                    	));
+                	}
+
                     break;
-                default:
-                    error_log("Unsupporeted message type: " . $message['type']);
-                    break;
+                
             }
             break;
         default:
