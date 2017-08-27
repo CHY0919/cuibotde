@@ -148,21 +148,21 @@ function get_day($day)
 		  	}
 		  }
 
-		  $sleep_str = "\n休假：".(string)$of_count."人:".$sleep_str;
+		  $sleep_str = "休假(".(string)$of_count."人):".$sleep_str;
 		  
 
 		  $on_count-=$of_count;
 
-		  $output_str = "替代役共：".$tde_count."人 "."今日上班：".$on_count."人 ".$sleep_str;
+		  $output_str = "替代役共：".$tde_count."人\n"."今日上班：".$on_count."人\n".$sleep_str;
 		  $output_str2 = "";
 		  foreach ($keys as $m_key)
 		  {
 		  	if($m_key=="補"||$m_key=="of"||$m_key=="課"||$m_key=="off")
 		  		continue;
 		  	if($m_key=="白")
-		  	{$output_str2=$output_str2."\n"."正常班：".$hashtable[$m_key];}
+		  	{$output_str2=$output_str2."\n"."正常班(".(string)$counttable[$m_key]."人)：".$hashtable[$m_key];}
 		  	else
-		  	{$output_str2=$output_str2."\n".$m_key."：".$hashtable[$m_key];}
+		  	{$output_str2=$output_str2."\n".$m_key."(".(string)$counttable[$m_key]."人)：".$hashtable[$m_key];}
 		  	
 
 		  }
