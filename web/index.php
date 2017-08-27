@@ -19,7 +19,7 @@
 require_once('./LINEBotTiny.php');
 require_once('./excel_parser.php');
 
-
+echo nl2br(get_day(date("d")));
 
 $channelAccessToken = 'hfKZRBMAdhy2zb8+w6lGxT125nw95ZeThqvZU2Jge0+uX04sAfaY8RLO/YQ0TWpKwhscvpoUnyXkOPK7t6jW834BRYxDkX+EZqoGgNB7MMpnLg1HfPS8OV7SX6VfZ1EucWDXRDRUSKZaR1WP69WATAdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'b59c0147973f523cca2165c4357250fa';
