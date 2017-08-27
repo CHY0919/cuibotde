@@ -48,6 +48,8 @@ foreach ($client->parseEvents() as $event) {
                 	else if(stristr($message['text'],"號班表"))
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
+                		if((int)$m_day>32)
+                			break;
                 		$m_message = get_day($m_day);
                 	}
 
