@@ -40,7 +40,7 @@ foreach ($client->parseEvents() as $event) {
                 	{
                 		$m_message = "健康翠柏、樂活翠柏！";
                 	}
-                	else if($message['text']=="今天班表")
+                	else if($message['text']=="今天班表"||$message['text']=="今日班表")
                 	{
                 		$m_message = get_day(date("d"));
                 		
