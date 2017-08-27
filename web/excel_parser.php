@@ -165,10 +165,11 @@ function get_day($day)
 
 		  }
 
-		  echo $output_str;
-		  echo $output_str2;
+		  //echo $output_str;
+		  //echo $output_str2;
 		  //var_dump($hashtable);
 
+		  return $output_str.'\n'.$output_str2;
 
 
 	}
