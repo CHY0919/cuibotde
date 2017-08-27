@@ -1,8 +1,6 @@
 <?php
 
 
-get_day(29);
-
 function num2alpha($n)  //數字轉英文(0=>A、1=>B、26=>AA...以此類推)
 {
     for($r = ""; $n >= 0; $n = intval($n / 26) - 1)

@@ -19,6 +19,8 @@
 require_once('./LINEBotTiny.php');
 require_once('./excel_parser.php');
 
+
+
 $channelAccessToken = 'hfKZRBMAdhy2zb8+w6lGxT125nw95ZeThqvZU2Jge0+uX04sAfaY8RLO/YQ0TWpKwhscvpoUnyXkOPK7t6jW834BRYxDkX+EZqoGgNB7MMpnLg1HfPS8OV7SX6VfZ1EucWDXRDRUSKZaR1WP69WATAdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'b59c0147973f523cca2165c4357250fa';
 
@@ -44,7 +46,7 @@ foreach ($client->parseEvents() as $event) {
                 	}
                 	else if($message['text']=="今天班表")
                 	{
-                		$m_message = get_day((int)$date("d"));
+                		$m_message = get_day(date("d"));
                 		$client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -55,6 +57,7 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
+
 
                     break;
                 
