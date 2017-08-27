@@ -148,7 +148,7 @@ function get_day($day)
 		  	}
 		  }
 
-		  $sleep_str = "\n休假：".(string)$of_count."人:".$sleep_str;
+		  $sleep_str = "休假：".(string)$of_count."人:".$sleep_str;
 		  
 
 		  $on_count-=$of_count;
@@ -159,7 +159,7 @@ function get_day($day)
 		  {
 		  	if($m_key=="補"||$m_key=="of"||$m_key=="課"||$m_key=="off")
 		  		continue;
-		  	$output_str2=$output_str2."\n".$m_key."：".$hashtable[$m_key];
+		  	$output_str2=$output_str2.$m_key."：".$hashtable[$m_key];
 
 		  }
 
