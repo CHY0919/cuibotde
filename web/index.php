@@ -19,9 +19,10 @@
 require_once('./LINEBotTiny.php');
 require_once('./excel_parser.php');
 
-#$m_day = "31號班表";
+#$m_day = "九號班表";
 
 #$m_day = preg_replace('/[^\d]/','',$m_day );
+#echo $m_day;
 #echo nl2br(get_day($m_day));
 
 $channelAccessToken = 'hfKZRBMAdhy2zb8+w6lGxT125nw95ZeThqvZU2Jge0+uX04sAfaY8RLO/YQ0TWpKwhscvpoUnyXkOPK7t6jW834BRYxDkX+EZqoGgNB7MMpnLg1HfPS8OV7SX6VfZ1EucWDXRDRUSKZaR1WP69WATAdB04t89/1O/w1cDnyilFU=';

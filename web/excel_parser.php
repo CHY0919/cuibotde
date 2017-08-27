@@ -21,6 +21,9 @@ function alpha2num($a)  //英文轉數字(A=>0、B=>1、AA=>26...以此類推)
 
 function get_day($day)
 	{
+		if($day=="")
+			return "請輸入阿拉伯數字+\"號班表\"來查詢";
+
 		$day = (int)$day+1;
 		$excel_file = "table.xls";
 
@@ -154,7 +157,7 @@ function get_day($day)
 
 		  $on_count-=$of_count;
 
-		  $output_str = "替代役共：".$tde_count."人\n"."今日上班：".$on_count."人\n".$sleep_str;
+		  $output_str = "替代役共：".$tde_count."人\n".$day-1."日上班：".$on_count."人\n".$sleep_str;
 		  $output_str2 = "";
 		  foreach ($keys as $m_key)
 		  {
