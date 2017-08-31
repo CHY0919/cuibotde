@@ -18,7 +18,7 @@
 
 require_once('./LINEBotTiny.php');
 require_once('./excel_parser.php');
-date_default_timezone_set("Asia/Taipei")
+date_default_timezone_set("Asia/Taipei");
 #$m_day = "九號班表";
 
 #$m_day = preg_replace('/[^\d]/','',$m_day );
