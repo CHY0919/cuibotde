@@ -68,6 +68,12 @@ foreach ($client->parseEvents() as $event) {
                 			break;
                 		$m_message = get_day($m_day);
                 	}
+                    else if($message['text']=="完整班表")
+                    {
+
+                        $m_message = 'https://cuibotde.herokuapp.com/web/tables.xls';
+
+                    }
                 	if($m_message!="")
                 	{
                 		$client->replyMessage(array(
@@ -80,6 +86,7 @@ foreach ($client->parseEvents() as $event) {
                         )
                     	));
                 	}
+                    
                     break;
                 
             }
