@@ -71,7 +71,19 @@ foreach ($client->parseEvents() as $event) {
                     else if($message['text']=="完整班表")
                     {
 
-                        $m_message = 'https://cuibotde.herokuapp.com/web/tables.xls';
+                        $m_message = 'https://cuibotde.herokuapp.com/web/table.xls';
+
+                    }
+                     else if($message['text']=="完整班表2")
+                    {
+
+                        $m_message = 'https://cuibotde.herokuapp.com/web/table.png';
+
+                    }
+                     else if($message['text']=="完整班表3")
+                    {
+
+                        $m_message = 'https://cuibotde.herokuapp.com/web/table.jpg';
 
                     }
                 	if($m_message!="")
