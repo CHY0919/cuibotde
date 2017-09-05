@@ -68,6 +68,10 @@ foreach ($client->parseEvents() as $event) {
                 			break;
                 		$m_message = get_day($m_day);
                 	}
+                    else if($message['text']=="菜單")
+                    {
+                        $m_message = "http://www.egv.org.tw/index.php?option=com_content&view=article&id=238:1060828-0903&catid=36:2015-07-05-17-05-44&Itemid=83";
+                    }
                     
                 	if($m_message!="")
                 	{
