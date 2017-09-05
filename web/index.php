@@ -18,12 +18,8 @@
 
 require_once('./LINEBotTiny.php');
 require_once('./excel_parser.php');
+require_once('./crawl_page.php');
 date_default_timezone_set("Asia/Taipei");
-#$m_day = "九號班表";
-
-#$m_day = preg_replace('/[^\d]/','',$m_day );
-#echo $m_day;
-#echo nl2br(get_day($m_day));
 
 echo date('Y-m-d H:i:s');
 
@@ -70,7 +66,7 @@ foreach ($client->parseEvents() as $event) {
                 	}
                     else if($message['text']=="菜單")
                     {
-                        $m_message = "http://www.egv.org.tw/index.php?option=com_content&view=article&id=238:1060828-0903&catid=36:2015-07-05-17-05-44&Itemid=83";
+                        $m_message = crawl_page("http://www.egv.org.tw/index.php?option=com_content&view=article&id=238:1060828-0903&catid=36:2015-07-05-17-05-44&Itemid=83");
                     }
                     
                 	if($m_message!="")
