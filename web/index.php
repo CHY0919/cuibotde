@@ -23,6 +23,7 @@ date_default_timezone_set("Asia/Taipei");
 
 echo date('Y-m-d H:i:s');
 
+
 $channelAccessToken = 'hfKZRBMAdhy2zb8+w6lGxT125nw95ZeThqvZU2Jge0+uX04sAfaY8RLO/YQ0TWpKwhscvpoUnyXkOPK7t6jW834BRYxDkX+EZqoGgNB7MMpnLg1HfPS8OV7SX6VfZ1EucWDXRDRUSKZaR1WP69WATAdB04t89/1O/w1cDnyilFU=';
 $channelSecret = 'b59c0147973f523cca2165c4357250fa';
 
