@@ -195,11 +195,13 @@ function get_day($day)
 			return "請輸入阿拉伯數字+\"人\"來抽籤";
 	global $ran1;
 $RandKey = array_rand($ran1,$number);
+$output_str3 = "";
 for($p=0;$p<$number;$p++)
 {
-return $ran1[$RandKey[$p]];
+print $ran1[$RandKey[$p]] . "<br>";
+$output_str3 = $output_str3. "<br>".$ran1[$RandKey[$p]];
 }
- 
+ return $output_str3;
 		  }
 
 ?>
