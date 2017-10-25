@@ -58,7 +58,7 @@ foreach ($client->parseEvents() as $event) {
 					else if(stristr($message['text'],"人"))
                 	{
                 		$m_number = preg_replace('/[^\d]/','',$message['text']);
-                		if((int)$m_number>13 and (int)$m_number<0)
+                		if((int)$m_number>13 or (int)$m_number<0)
                 			break;
                 		$m_message = get_r($m_number);
                 	}
