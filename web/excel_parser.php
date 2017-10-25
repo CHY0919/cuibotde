@@ -197,7 +197,7 @@ function get_day($day)
 $RandKey = array_rand($ran1,$number);
 for($p=0;$p<$number;$p++)
 {
-return $ran1[$RandKey[$p]] . "<br>";
+return $ran1[$RandKey[$p]];
 }
  
 		  }
