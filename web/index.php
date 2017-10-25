@@ -22,6 +22,10 @@ require_once('./crawl_page.php');
 date_default_timezone_set("Asia/Taipei");
 
 echo date('Y-m-d H:i:s');
+echo get_day(date('d'));
+echo get_r(2);
+
+
 
 
 $channelAccessToken = 'hfKZRBMAdhy2zb8+w6lGxT125nw95ZeThqvZU2Jge0+uX04sAfaY8RLO/YQ0TWpKwhscvpoUnyXkOPK7t6jW834BRYxDkX+EZqoGgNB7MMpnLg1HfPS8OV7SX6VfZ1EucWDXRDRUSKZaR1WP69WATAdB04t89/1O/w1cDnyilFU=';
@@ -50,6 +54,13 @@ foreach ($client->parseEvents() as $event) {
                 		if((int)$m_day>32)
                 			break;
                 		$m_message = get_day($m_day);
+                	}
+					else if(stristr($message['text'],"人"))
+                	{
+                		$m_number = preg_replace('/[^\d]/','',$message['text']);
+                		if((int)$m_number>13 and (int)$m_number<0)
+                			break;
+                		$m_message = get_r($m_number);
                 	}
                 	else if($message['text']=="明天班表"||$message['text']=="明日班表")
                 	{

@@ -1,6 +1,6 @@
 <?php
 
-
+$ran1 = array();
 function num2alpha($n)  //數字轉英文(0=>A、1=>B、26=>AA...以此類推)
 {
     for($r = ""; $n >= 0; $n = intval($n / 26) - 1)
@@ -21,11 +21,13 @@ function alpha2num($a)  //英文轉數字(A=>0、B=>1、AA=>26...以此類推)
 
 function get_day($day)
 	{
+		global $ran1;
 		if($day=="")
 			return "請輸入阿拉伯數字+\"號班表\"來查詢";
 
 		$day = (int)$day+1;
 		$excel_file = "table.xls";
+		$Q = '5';
 
 		$tde_start = -1;
 		$tde_end = -1;
@@ -170,14 +172,34 @@ function get_day($day)
 		  	
 
 		  }
+		   $ran = array();
+		  for($p=1; $p<=$tde_count; $p++)
+		  {
+		  
+		  array_push($ran,$m_final_array[$p][1]);
+		 
+		  }
+	//var_dump($ran);
+	 $GLOBALS['ran1'] = $ran;
+	 	var_dump($ran1);
+		 
 
-		  //echo $output_str;
-		  //echo $output_str2;
-		  //var_dump($hashtable);
+		  return $output_str."\n".$output_str2. "<br>";
 
-		  return $output_str."\n".$output_str2;
-
-
+	
 	}
+	
+	function get_r($number)
+		  {
+			  if($number=="")
+			return "請輸入阿拉伯數字+\"人\"來抽籤";
+	global $ran1;
+$RandKey = array_rand($ran1,$number);
+for($p=0;$p<$number;$p++)
+{
+print $ran1[$RandKey[$p]] . "<br>";
+}
+
+		  }
 
 ?>
