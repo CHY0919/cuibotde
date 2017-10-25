@@ -21,9 +21,9 @@ require_once('./excel_parser.php');
 require_once('./crawl_page.php');
 date_default_timezone_set("Asia/Taipei");
 
-echo date('Y-m-d H:i:s');
-echo get_day(date('d'));
-echo get_r(2);
+//echo date('Y-m-d H:i:s');
+//echo get_day(date('d'));
+//echo get_r(2);
 
 
 

@@ -181,7 +181,7 @@ function get_day($day)
 		  }
 	//var_dump($ran);
 	 $GLOBALS['ran1'] = $ran;
-	 	var_dump($ran1);
+	 	//var_dump($ran1);
 		 
 
 		  return $output_str."\n".$output_str2. "<br>";
@@ -197,9 +197,9 @@ function get_day($day)
 $RandKey = array_rand($ran1,$number);
 for($p=0;$p<$number;$p++)
 {
-print $ran1[$RandKey[$p]] . "<br>";
+return $ran1[$RandKey[$p]] . "<br>";
 }
-
+ 
 		  }
 
 ?>
