@@ -22,8 +22,8 @@ require_once('./crawl_page.php');
 date_default_timezone_set("Asia/Taipei");
 
 //echo date('Y-m-d H:i:s');
-//echo get_day(date('d'));
-//echo get_r(4);
+echo get_day(date('d'));
+echo get_r(4);
 
 
 
@@ -55,7 +55,16 @@ foreach ($client->parseEvents() as $event) {
                 			break; 
                 		$m_message = get_day($m_day);
                 	}
-					else if(stristr($message['text'],"人"))
+					//全替代役抽籤
+					//else if(stristr($message['text'],"人"))
+                //	{
+                	//	$m_number = preg_replace('/[^\d]/','',$message['text']);
+                //		if((int)$m_number>10 or (int)$m_number<0)
+                //			break;
+                	//	$m_message = get_r($m_number);
+                //	}
+					//自行輸入抽籤的人
+					else if(stristr($message['text'],"抽",$message['text'],"人"))
                 	{
                 		$m_number = preg_replace('/[^\d]/','',$message['text']);
                 		if((int)$m_number>10 or (int)$m_number<0)
