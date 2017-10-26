@@ -185,7 +185,7 @@ function get_day($day)
 	 	
 		 
 
-		  return $output_str."\n".$output_str2. "<br>";
+		  return $output_str."\n".$output_str2;
 
 	
 	}
