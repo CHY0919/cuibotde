@@ -172,7 +172,9 @@ function get_day($day)
 		  	
 
 		  }
-		  //這裡有問題
+		
+		  return $output_str."\n".$output_str2;
+  //這裡有問題
 		//  $ran = array();
 		//  for($p=1; $p<=$tde_count; $p++)
 		//  {
@@ -182,12 +184,6 @@ function get_day($day)
 		//  }
 	
 	// $GLOBALS['ran1'] = $ran;
-	 	
-		 
-
-		  return $output_str."\n".$output_str2;
-
-	
 	}
 	
 	function get_r($number)
