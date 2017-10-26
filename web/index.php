@@ -24,6 +24,7 @@ date_default_timezone_set("Asia/Taipei");
 //echo date('Y-m-d H:i:s');
 //echo get_day(date('d'));
 //echo get_r(4);
+//echo get_choice("11 23");
 
 
 
@@ -58,6 +59,11 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿宏";
                 		
                 	}
+					else if($message['text']=="柯南")
+                	{
+                		$m_message = "阿皓";
+                		
+                	}
                 	else if(stristr($message['text'],"號班表"))
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
@@ -75,12 +81,11 @@ foreach ($client->parseEvents() as $event) {
 						}
 					
 					//自行輸入抽籤的人
-					//else if(stristr($message['text'],"抽",$message['text'],"人"))
+				//	else if(stristr($message['text'],"抽人囉"))
                 //	{
-                //		$m_number = preg_replace('/[^\d]/','',$message['text']);
-                	//	if((int)$m_number>10 or (int)$m_number<0)
-                	//		break;
-                	//	$m_message = get_r($m_number);
+						//$m_choice = preg_replace('/[^\d]/','',$message['text']);
+                //		$m_choice = $message['text'];
+                	//	$m_message = get_choice($m_choice);
                 //	}
                 	else if($message['text']=="明天班表"||$message['text']=="明日班表")
                 	{

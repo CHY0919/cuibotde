@@ -202,7 +202,17 @@ $output_str3 = $output_str3.$ran1[$RandKey[$p]]."\n";
  return $output_str3;
 		  }
 		  
-		//function get_choice($)  
+		//function get_choice($choice)  
+	//	{
+			//$output_str4 = "";
+
+		//	$choice_array = explode(" ", $choice);
+		//	$RandKey1 = array_rand($choice_array,1);
+		//	$output_str4 = $output_str4.$choice_array[$RandKey[0]]
+		//	return $choice_array[$RandKey1[0]];
+		//	var_dump($choice_array);
+			
+		//}
 		  
 
 ?>
