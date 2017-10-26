@@ -56,21 +56,21 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = get_day($m_day);
                 	}
 					//全替代役抽籤
-					//else if(stristr($message['text'],"人"))
-                //	{
-                	//	$m_number = preg_replace('/[^\d]/','',$message['text']);
-                //		if((int)$m_number>10 or (int)$m_number<0)
-                //			break;
-                	//	$m_message = get_r($m_number);
-                //	}
-					//自行輸入抽籤的人
-					else if(stristr($message['text'],"抽",$message['text'],"人"))
+					else if(stristr($message['text'],"人"))
                 	{
                 		$m_number = preg_replace('/[^\d]/','',$message['text']);
                 		if((int)$m_number>10 or (int)$m_number<0)
                 			break;
                 		$m_message = get_r($m_number);
                 	}
+					//自行輸入抽籤的人
+					//else if(stristr($message['text'],"抽",$message['text'],"人"))
+                //	{
+                //		$m_number = preg_replace('/[^\d]/','',$message['text']);
+                	//	if((int)$m_number>10 or (int)$m_number<0)
+                	//		break;
+                	//	$m_message = get_r($m_number);
+                //	}
                 	else if($message['text']=="明天班表"||$message['text']=="明日班表")
                 	{
                 		$m_day = (int)date("d")+1;

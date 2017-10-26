@@ -201,7 +201,7 @@ $output_str3 = $output_str3.$ran1[$RandKey[$p]]."\n";
  return $output_str3;
 		  }
 		  
-		function get_choice($)  
+	//	function get_choice($)  
 		  
 
 ?>
