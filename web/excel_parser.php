@@ -172,16 +172,17 @@ function get_day($day)
 		  	
 
 		  }
-		   $ran = array();
-		  for($p=1; $p<=$tde_count; $p++)
-		  {
+		  //這裡有問題
+		//  $ran = array();
+		//  for($p=1; $p<=$tde_count; $p++)
+		//  {
 		  
-		  array_push($ran,$m_final_array[$p][1]);
+		//  array_push($ran,$m_final_array[$p][1]);
 		 
-		  }
-	//var_dump($ran);
-	 $GLOBALS['ran1'] = $ran;
-	 	//var_dump($ran1);
+		//  }
+	
+	// $GLOBALS['ran1'] = $ran;
+	 	
 		 
 
 		  return $output_str."\n".$output_str2. "<br>";
@@ -193,13 +194,14 @@ function get_day($day)
 		  {
 			  if($number=="")
 			return "請輸入阿拉伯數字+\"人\"來抽籤";
-	global $ran1;
+		//global $ran1;
+	$ran1 = array("朱哲宏","郭軒廷", "童聖恩", "林志勇", "張智捷", "陳皓瑋", "黃鴻凱", "王聖文", "張邵文", "李明", "翟子毅" );
 $RandKey = array_rand($ran1,$number);
 $output_str3 = "";
 for($p=0;$p<$number;$p++)
 {
-print $ran1[$RandKey[$p]] . "<br>";
-$output_str3 = $output_str3. "<br>".$ran1[$RandKey[$p]];
+//print $ran1[$RandKey[$p]] . "<br>";
+$output_str3 = $output_str3.$ran1[$RandKey[$p]]."<br>";
 }
  return $output_str3;
 		  }

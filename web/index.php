@@ -23,7 +23,7 @@ date_default_timezone_set("Asia/Taipei");
 
 //echo date('Y-m-d H:i:s');
 //echo get_day(date('d'));
-//echo get_r(2);
+//echo get_r(4);
 
 
 
@@ -52,7 +52,7 @@ foreach ($client->parseEvents() as $event) {
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
                 		if((int)$m_day>32)
-                			break;
+                			break; 
                 		$m_message = get_day($m_day);
                 	}
 					else if(stristr($message['text'],"人"))
