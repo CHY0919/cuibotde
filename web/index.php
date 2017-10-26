@@ -48,6 +48,11 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = get_day(date("d"));
                 		
                 	}
+					else if($message['text']=="8+9")
+                	{
+                		$m_message = "王聖文+\"(聖文說要加的我是被逼的)\"");
+                		
+                	}
                 	else if(stristr($message['text'],"號班表"))
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
@@ -56,7 +61,7 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = get_day($m_day);
                 	}
 					//全替代役抽籤
-					else if(stristr($message['text'],"抽"&&"個替代役"))
+					else if(stristr($message['text'],"個替代役"))
 						{
                 		$m_number = preg_replace('/[^\d]/','',$message['text']);
                 		if((int)$m_number>10 or (int)$m_number<0)
