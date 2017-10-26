@@ -56,7 +56,7 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = get_day($m_day);
                 	}
 					//全替代役抽籤
-					else if(stristr($message['text'],"人"))
+					else if(stristr("抽",$message['text'],"個替代役"))
                 	{
                 		$m_number = preg_replace('/[^\d]/','',$message['text']);
                 		if((int)$m_number>10 or (int)$m_number<0)

@@ -188,7 +188,8 @@ function get_day($day)
 	
 	function get_r($number)
 		  {
-			  
+			  if($number=="")
+			return "請輸入+\"抽\"阿拉伯數字+\"個替代役\"來查詢";
 		//global $ran1;
 	$ran1 = array("朱哲宏","郭軒廷", "童聖恩", "林志勇", "張智捷", "陳皓瑋", "黃鴻凱", "王聖文", "張邵文", "李明", "翟子毅" );
 $RandKey = array_rand($ran1,$number);
@@ -201,7 +202,7 @@ $output_str3 = $output_str3.$ran1[$RandKey[$p]]."\n";
  return $output_str3;
 		  }
 		  
-	//	function get_choice($)  
+		//function get_choice($)  
 		  
 
 ?>
