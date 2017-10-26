@@ -50,7 +50,12 @@ foreach ($client->parseEvents() as $event) {
                 	}
 					else if($message['text']=="8+9")
                 	{
-                		$m_message = "王聖文+\"(聖文說要加的我是被逼的)\"";
+                		$m_message = "王聖文(聖文說要加的,我是被逼的)";
+                		
+                	}
+					else if($message['text']=="懶惰人")
+                	{
+                		$m_message = "阿宏";
                 		
                 	}
                 	else if(stristr($message['text'],"號班表"))
