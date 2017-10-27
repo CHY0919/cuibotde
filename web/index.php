@@ -64,6 +64,11 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿皓";
                 		
                 	}
+					else if($message['text']=="小雞雞")
+                	{
+                		$m_message = "阿勇";
+                		
+                	}
                 	else if(stristr($message['text'],"號班表"))
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
