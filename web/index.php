@@ -24,7 +24,9 @@ date_default_timezone_set("Asia/Taipei");
 //echo date('Y-m-d H:i:s');
 //echo get_day(date('d'));
 //echo get_r(4);
-//echo get_choice("11 23");
+echo get_choice1("A B C 1個替代役");
+echo get_choice2("1 2 3 4 5 6 7 2個替代役");
+echo get_choice3("1 2 3 4 5 6 7 3個替代役");
 
 
 
@@ -82,21 +84,34 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = get_day($m_day);
                 	}
 					//全替代役抽籤
-					else if(stristr($message['text'],"個替代役"))
-						{
-                		$m_number = preg_replace('/[^\d]/','',$message['text']);
-                		if((int)$m_number>10 or (int)$m_number<0)
-                			break;
-                		$m_message = get_r($m_number);
-						}
+				//	else if(stristr($message['text'],"個替代役"))
+					//	{
+                		//$m_number = preg_replace('/[^\d]/','',$message['text']);
+                		//if((int)$m_number>10 or (int)$m_number<0)
+                			//break;
+                		//$m_message = get_r($m_number);
+						//}
 					
 					//自行輸入抽籤的人
-				//	else if(stristr($message['text'],"抽人囉"))
-                //	{
-						//$m_choice = preg_replace('/[^\d]/','',$message['text']);
-                //		$m_choice = $message['text'];
-                	//	$m_message = get_choice($m_choice);
-                //	}
+					else if(stristr($message['text'],"抽1個出差"))
+                	{
+						$m_choice = preg_replace('/[^\d]/','',$message['text']);
+                		$m_choice = $message['text'];
+                	    $m_message = get_choice1($m_choice);
+                    }
+					else if(stristr($message['text'],"抽2個出差"))
+                	{
+						$m_choice = preg_replace('/[^\d]/','',$message['text']);
+                		$m_choice = $message['text'];
+                	    $m_message = get_choice2($m_choice);
+                    }
+
+					else if(stristr($message['text'],"抽3個出差"))
+                	{
+						$m_choice = preg_replace('/[^\d]/','',$message['text']);
+                		$m_choice = $message['text'];
+                	    $m_message = get_choice3($m_choice);
+                    }
                 	else if($message['text']=="明天班表"||$message['text']=="明日班表")
                 	{
                 		$m_day = (int)date("d")+1;

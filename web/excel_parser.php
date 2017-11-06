@@ -186,33 +186,67 @@ function get_day($day)
 	// $GLOBALS['ran1'] = $ran;
 	}
 	
-	function get_r($number)
-		  {
-			  if($number=="")
-			return "請輸入阿拉伯數字+\"個替代役\"來查詢";
+	//function get_r($number)
+		//  {
+			//  if($number=="")
+			//return "請輸入阿拉伯數字+\"個替代役\"來查詢";
 		//global $ran1;
-	$ran1 = array("朱哲宏","郭軒廷", "童聖恩", "林志勇", "張智捷", "陳皓瑋", "黃鴻凱", "王聖文", "張邵文", "李明", "翟子毅" );
-$RandKey = array_rand($ran1,$number);
-$output_str3 = "";
-for($p=0;$p<$number;$p++)
-{
+	//$ran1 = array("朱哲宏","郭軒廷", "童聖恩", "林志勇", "張智捷", "陳皓瑋", "黃鴻凱", "王聖文", "張邵文", "李明", "翟子毅" );
+//$RandKey = array_rand($ran1,$number);
+//$output_str3 = "";
+//for($p=0;$p<$number;$p++)
+//{
 //print $ran1[$RandKey[$p]] . "<br>";
-$output_str3 = $output_str3.$ran1[$RandKey[$p]]."\n";
+//$output_str3 = $output_str3.$ran1[$RandKey[$p]]."\n";
+//}
+ //return $output_str3;
+	//	  }
+		  
+		function get_choice1($choice)  
+		{
+			$output_str4 = "";
+
+		$choice_array = explode(" ", $choice);
+		$length = count($choice_array);
+		unset($choice_array[$length - 1]);
+	    $RandKey1 = array_rand($choice_array,1);
+		$output_str4 = $output_str4.$choice_array[$RandKey[0]];
+	    var_dump($choice_array);
+		return $RandKey1;				
+		}
+		
+		function get_choice2($choice)  
+		{
+			$output_str4 = "";
+		$choice_array = explode(" ", $choice);
+		$length = count($choice_array);
+		unset($choice_array[$length - 1]);
+	    $RandKey1 = array_rand($choice_array,2);
+		
+	    var_dump($choice_array);
+		for($p=0;$p<2;$p++)
+{
+
+$output_str4 = $output_str4.$choice_array[$RandKey1[$p]]."\n";
 }
- return $output_str3;
-		  }
-		  
-		//function get_choice($choice)  
-	//	{
-			//$output_str4 = "";
+ return $output_str4;
+						
+		}
+		
+		function get_choice3($choice)  
+		{
+			$output_str4 = "";
+		$choice_array = explode(" ", $choice);
+		$length = count($choice_array);
+		unset($choice_array[$length - 1]);
+	    $RandKey1 = array_rand($choice_array,3);
+		
+	    var_dump($choice_array);
+		for($p=0;$p<3;$p++)
+{
 
-		//	$choice_array = explode(" ", $choice);
-		//	$RandKey1 = array_rand($choice_array,1);
-		//	$output_str4 = $output_str4.$choice_array[$RandKey[0]]
-		//	return $choice_array[$RandKey1[0]];
-		//	var_dump($choice_array);
-			
-		//}
-		  
-
+$output_str4 = $output_str4.$choice_array[$RandKey1[$p]]."\n";
+}
+ return $output_str4;
+		}
 ?>
