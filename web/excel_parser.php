@@ -205,14 +205,19 @@ function get_day($day)
 		function get_choice1($choice)  
 		{
 			$output_str4 = "";
-
 		$choice_array = explode(" ", $choice);
 		$length = count($choice_array);
-		unset($choice_array[$length - 1]);
-	    $RandKey1 = array_rand($choice_array,1);
-		$output_str4 = $output_str4.$choice_array[$RandKey[0]];
+		//unset($choice_array[$length - 1]);
+	    $RandKey1 = array_rand($choice_array,2);
+		
 	    var_dump($choice_array);
-		return $RandKey1;				
+		for($p=0;$p<1;$p++)
+{
+
+$output_str4 = $output_str4.$choice_array[$RandKey1[$p]];
+}
+ return $output_str4;
+						
 		}
 		
 		function get_choice2($choice)  

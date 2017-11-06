@@ -24,7 +24,7 @@ date_default_timezone_set("Asia/Taipei");
 //echo date('Y-m-d H:i:s');
 //echo get_day(date('d'));
 //echo get_r(4);
-echo get_choice1("A B C 1個替代役");
+echo get_choice1("1 2 3 4 1個替代役");
 echo get_choice2("1 2 3 4 5 6 7 2個替代役");
 echo get_choice3("1 2 3 4 5 6 7 3個替代役");
 
