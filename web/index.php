@@ -54,7 +54,7 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "王聖文";
                 		
                 	}
-					else if($message['text']=="關車門")
+					else if($message['text']=="翻滾吧")
                 	{
                 		$m_message = "小郭";
                 		
