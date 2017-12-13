@@ -79,16 +79,17 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿勇";
                 		
                 	}
-					else if((string)date('H') == "15" && (string)date('i') == "44" && (string)date('s') == "00")
-                	{
-                		$m_message = "你好";
+				//	else if((string)date('H') == "15" && (string)date('i') == "44" && (string)date('s') == "00")
+                //	{
+                //		$m_message = "你好";
                 		
-                    }
-				else if((string)date('i') == "51")
-                	{
-                		$m_message = "你好";
+                 //   }
+				//else if((string)date('i') == "51")
+                //	{
+                //		$m_message = "你好";
                 		
-                    }
+                  //  }
+			
                 	else if(stristr($message['text'],"號班表"))
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
