@@ -22,7 +22,7 @@ require_once('./crawl_page.php');
 date_default_timezone_set("Asia/Taipei");
 
 echo date('Y-m-d H:i:s');
-//echo get_day(date('d'));
+echo get_day(date('d'));
 //echo get_r(4);
 //echo get_choice1("1 2 3 4 1個替代役");
 //echo get_choice2("1 2 3 4 5 6 7 2個替代役");
@@ -76,9 +76,9 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿勇";
                 		
                 	}
-					//else if(date('13:54:00') || $message['text']=="你好啊")
-                	//{
-                	//	$m_message = "你好";
+					else if(date('H') == '15' && date('i') == '28' && date('s') == '00')
+                	{
+                		$m_message = "你好";
                 		
                 //	}
                 	else if(stristr($message['text'],"號班表"))
