@@ -22,7 +22,7 @@ require_once('./crawl_page.php');
 date_default_timezone_set("Asia/Taipei");
 
 echo date('Y-m-d H:i:s');
-//echo date('H');
+echo (string)date('H');
 //echo date('i');
 //echo date('s');
 //echo get_day(date('d'));
@@ -84,7 +84,7 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "你好";
                 		
                     }
-				else if((string)date('s') == "12")
+				else if((string)date('i') == "51")
                 	{
                 		$m_message = "你好";
                 		
