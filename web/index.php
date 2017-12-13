@@ -76,7 +76,7 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿勇";
                 		
                 	}
-					else if(date('H') == '15' && date('i') == '28' && date('s') == '00')
+					else if(date('H') == "15" && date('i') == "31" && date('s') == "00")
                 	{
                 		$m_message = "你好";
                 		
