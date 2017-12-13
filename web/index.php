@@ -81,6 +81,11 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "你好";
                 		
                     }
+					else if($message['text']=="QAQ")
+                	{
+                		
+                		bot.push('test');
+                	}
                 	else if(stristr($message['text'],"號班表"))
                 	{
                 		$m_day = preg_replace('/[^\d]/','',$message['text']);
