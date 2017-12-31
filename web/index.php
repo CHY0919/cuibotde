@@ -135,8 +135,8 @@ foreach ($client->parseEvents() as $event) {
 					//清潔周報表排序用
 					else if(stristr($message['text'],"排序"))
                 	{
-						$m_choice = preg_replace('/[^\d]/','',$message['text']);
-                		$m_choice = $message['text'];
+						$sort = preg_replace('/[^\d]/','',$message['text']);
+                		$sort = $message['text'];
                 	    $m_message = get_sort($sort);
                     }
 					
