@@ -137,7 +137,7 @@ foreach ($client->parseEvents() as $event) {
                 	{
 						$m_choice = preg_replace('/[^\d]/','',$message['text']);
                 		$m_choice = $message['text'];
-                	    $m_message = get_choice1($m_choice);
+                	    $m_message = get_sort($sort);
                     }
 					
 					
