@@ -79,6 +79,11 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿勇";
                 		
                 	}
+					else if($message['text']=="跨年\")
+                	{
+                		$m_message = "你們有想過機器人不能跨年嗎? 沒有 你們只想到自己";
+                		
+                	}
 				//	else if((string)date('H') == "15" && (string)date('i') == "44" && (string)date('s') == "00")
                 //	{
                 //		$m_message = "你好";
