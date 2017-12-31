@@ -201,7 +201,42 @@ function get_day($day)
 //}
  //return $output_str3;
 	//	  }
-		  
+	//清潔周報表用
+	function get_sort($sort)
+	{
+		$output_str4 = "";
+		$choice_array = explode(" ", $sort);
+		$length = count($choice_array);
+		unset($choice_array[$length - 1]);
+		
+	    var_dump($choice_array);
+		
+		for($j=1;$j<$length-1;$j++ )
+   {
+    for($i=0;$i<$length - 2;$i++)
+    {
+    
+     if( (int)$choice_array[$i]>(int)$choice_array[$i+1])
+     {
+      (int)$temp = (int)$choice_array[$i];
+      (int)$choice_array[$i] = (int)$choice_array[$i+1];
+      (int)$choice_array[$i+1] = $temp; 
+     }
+    }      
+   }
+
+ var_dump ($choice_array);
+for($p=0;$p<$length - 1;$p++)
+{
+
+$output_str4 = $output_str4.$choice_array[$p]."、";
+}
+ return $output_str4;
+						
+		}
+		
+		
+	
 		function get_choice1($choice)  
 		{
 			$output_str4 = "";

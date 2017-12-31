@@ -30,6 +30,7 @@ echo (string)date('H');
 //echo get_choice1("1 2 3 4 1個替代役");
 //echo get_choice2("1 2 3 4 5 6 7 2個替代役");
 //echo get_choice3("1 2 3 4 5 6 7 3個替代役");
+//echo get_sort("6 8 7 9 12 0 6 123121312");
 
 
 
@@ -88,7 +89,7 @@ foreach ($client->parseEvents() as $event) {
                 //	{
                 //		$m_message = "你好";
                 		
-                 //   }
+                 //  }
 				//else if((string)date('i') == "51")
                 //	{
                 //		$m_message = "你好";
@@ -131,6 +132,16 @@ foreach ($client->parseEvents() as $event) {
                 		$m_choice = $message['text'];
                 	    $m_message = get_choice3($m_choice);
                     }
+					//清潔周報表排序用
+					else if(stristr($message['text'],"排序"))
+                	{
+						$m_choice = preg_replace('/[^\d]/','',$message['text']);
+                		$m_choice = $message['text'];
+                	    $m_message = get_choice1($m_choice);
+                    }
+					
+					
+					
                 	else if($message['text']=="明天班表"||$message['text']=="明日班表")
                 	{
                 		$m_day = (int)date("d")+1;
