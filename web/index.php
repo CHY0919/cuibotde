@@ -79,7 +79,7 @@ foreach ($client->parseEvents() as $event) {
                 		$m_message = "阿勇";
                 		
                 	}
-					else if($message['text']=="跨年\")
+					else if($message['text']=="跨年")
                 	{
                 		$m_message = "你們有想過機器人不能跨年嗎? 沒有 你們只想到自己";
                 		
