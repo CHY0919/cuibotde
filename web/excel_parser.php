@@ -229,7 +229,7 @@ function get_day($day)
 for($p=0;$p<$length - 1;$p++)
 {
 
-$output_str4 = $output_str4.$choice_array[$p]."、";
+$output_str4 = $output_str4.$choice_array[$p].",";
 }
  return $output_str4;
 						
